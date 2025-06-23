@@ -17,8 +17,8 @@ const COMMISSION_ADDRESS = 'kaspa:qrfh5j6gyqk4s2fzyy74q09e4fntgnzpcz99zxuqchaart
 const TICKET_PRICE = 10_000_000_000n; // 10 Kaspa in sompis (1 KAS = 10^8 sompi)
 const COMMISSION_PERCENTAGE = 10; // 10%
 
-// === Wallet Setup ===
-const MNEMONIC = 'firm health purity fragile horse bounce laugh love symptom remind buzz laugh';
+// === Wallet Setup (SECURE METHOD) ===
+const MNEMONIC = process.env.MNEMONIC;
 let wallet;
 (async () => {
   wallet = await Wallet.fromMnemonic({
